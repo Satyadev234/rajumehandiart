@@ -1,0 +1,70 @@
+/**
+ * Master Registry of all 92 images used across Raju Mehandi Art.
+ */
+
+// Local Assets (imported in various files)
+export const localImages = [
+  'cat_bridal_mehndi_1791792933575.jpg',
+  'cat_engagement_mehndi_1791792958245.jpg',
+  'cat_family_mehndi_1791792971328.jpg',
+  'cat_groom_mehndi_1791792943764.jpg',
+  'cat_portrait_mehndi_1791792921303.jpg',
+  'cinematic_bridal_bg_1791821227070.jpg',
+  'gallery_arm_design_1791803875379.jpg',
+  'gallery_open_palms_1791803856555.jpg',
+  'gallery_red_bridal_1791803843238.jpg',
+  'gallery_symmetrical_palms_1791803890159.jpg',
+  'gallery_traditional_intricate_1791803832929.jpg',
+  'gallery_turquoise_bridal_1791803820256.jpg',
+  'hero_bridal_prep_1791791395732.jpg',
+  'hero_bride_mehndi_1791791425667.jpg',
+  'hero_mehndi_hands_1791791412241.jpg',
+  'hero_wedding_scene_1791791440485.jpg',
+  'journey_hero_illustration_1791801664352.jpg',
+  'pkg_premium_bridal_1791795205223.jpg',
+  'pkg_royal_bridal_1791795230356.jpg',
+  'pkg_signature_bridal_1791795218611.jpg',
+  'raju_homepage_mockup_1792037822675.jpg',
+  'raju_logo_gold_1792003179449.jpg',
+  'raju_owner_portrait_1792049880220.jpg',
+  'step1_divine_blessings_1791801679244.jpg',
+  'step2_pure_henna_leaves_1791801690645.jpg',
+  'step3_blessed_henna_blend_1791801707980.jpg',
+  'step4_natural_dye_release_1791801727858.jpg',
+  'step5_ready_for_beauty_1791801741171.jpg',
+  'style_arabic_design_1791806840539.jpg',
+  'style_customise_design_1791806822254.jpg',
+  'style_portrait_mehndi_1791806852945.jpg',
+  'style_storytelling_mehndi_1791806865116.jpg',
+  'style_traditional_mehndi_1791806882051.jpg',
+  'vikash_logo_gold_1791821209128.jpg'
+];
+
+// Unsplash Placeholder URLs from Gallery
+const unsplashIds = [
+  '1583391733956-3750e0ff4e8b', '1617627143750-d86bc21e42bb', '1610030469983-98e550d6193c', '1609505848912-b7ef3b774b2f',
+  '1519741497674-611481863552', '1511285560929-80b456fea0bc', '1583939003579-730e3918a45a', '1606800052052-a08af7148866',
+  '1537633552985-df8429e8048b', '1546069901-ba9599a7e63c', '1507679799987-c73779587ccf', '1520854221256-17451cc331bf',
+  '1465495976277-4387d4b0b4c6', '1519225421980-715cb0215aed', '1532712938310-34cb3982ef74', '1544005313-94ddf0286df2',
+  '1506794778202-cad84cf45f1d', '1534528741775-53994a69daeb', '1517841905240-472988babdf9', '1524504388940-b1c1722653e1',
+  '1501196354995-cbb51c65aaea', '1522075469751-3a6694fb2f61', '1508214751196-bcfd4ca60f91', '1515886657613-9f3515b0c78f',
+  '1494790108377-be9c29b29330', '1500648767791-00dcc994a43e', '1507003211169-0a1dd7228f2d', '1539571696357-5a69c17a67c6',
+  '1529626455594-4ff0802cfb7e', '1517486808906-6ca8b3f04846', '1513151233558-d860c5398176', '1516575334481-f85287c2c82d',
+  '1525351484163-7529414344d8', '1534447677768-be436bb09401', '1509967419530-da38b4704bc6', '1522771739844-6a9f6d5f14af',
+  '1512496015851-a90fb38ba796', '1531746020798-e6953c6e8e04', '1502823403499-6ccfcf4fb433', '1519699047748-de8e457a634e',
+  '1513956589380-bad6acb9b9d4', '1543852786-1cf6624b9987', '1554151228-14d9def656e4', '1501004318641-b39e6451bec6',
+  '1506157786151-b8491531f063', '1520333789090-1afc82db536a', '1523381210434-271e8be1f52b', '1534528741775-53994a69daeb',
+  '1517841905240-472988babdf9', '1524504388940-b1c1722653e1', '1501196354995-cbb51c65aaea', '1522075469751-3a6694fb2f61',
+  '1508214751196-bcfd4ca60f91', '1515886657613-9f3515b0c78f', '1494790108377-be9c29b29330', '1500648767791-00dcc994a43e',
+  '1507003211169-0a1dd7228f2d', '1539571696357-5a69c17a67c6'
+];
+
+export const galleryPlaceholderImages = unsplashIds.map(id => ({
+  url: `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1200&q=80`
+}));
+
+export const allImages = {
+  local: localImages,
+  placeholders: galleryPlaceholderImages,
+  totalCount: localImages.length + galleryPlaceholderImages.length
+};

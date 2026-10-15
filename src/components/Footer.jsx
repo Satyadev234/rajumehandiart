@@ -1,4 +1,4 @@
-import { Phone, Instagram, MapPin, Clock, ShieldCheck, ChevronRight, MessageCircle } from 'lucide-react';
+import { Phone, Instagram, Facebook, Mail, MapPin, Clock, ShieldCheck, ChevronRight, MessageCircle } from 'lucide-react';
 import { footerData } from '../data/finalCtaData';
 
 /**
@@ -121,8 +121,8 @@ export default function Footer() {
               <span>Studio Hours: 10:00 AM – 9:00 PM (By Appointment)</span>
             </div>
 
-            {/* Phone Contacts */}
-            <div className="flex flex-col space-y-1.5 pt-1">
+            {/* Phone & Email Contacts */}
+            <div className="flex flex-col space-y-2 pt-1">
               <div className="flex items-center gap-2.5 text-xs">
                 <Phone className="w-4 h-4 text-[#D4AF37] shrink-0" aria-hidden="true" />
                 <a
@@ -131,27 +131,40 @@ export default function Footer() {
                 >
                   +91 {footerData.contact.primaryPhone}
                 </a>
-                <span className="text-[#D4AF37]/50">/</span>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs">
+                <Mail className="w-4 h-4 text-[#D4AF37] shrink-0" aria-hidden="true" />
                 <a
-                  href={`tel:${footerData.contact.secondaryPhone}`}
-                  className="text-[#FFF8F0] hover:text-[#E5C988] transition-colors font-medium tracking-wide"
+                  href={`mailto:${footerData.contact.email}`}
+                  className="text-[#FFF8F0] hover:text-[#E5C988] transition-colors font-medium tracking-wide truncate"
                 >
-                  {footerData.contact.secondaryPhone}
+                  {footerData.contact.email}
                 </a>
               </div>
             </div>
 
             {/* Social & WhatsApp Buttons */}
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
                 href={footerData.contact.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded bg-white/5 border border-[#D4AF37]/30 hover:border-[#D4AF37] hover:bg-white/10 text-xs text-[#FFF8F0] transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded bg-white/5 border border-[#D4AF37]/30 hover:border-[#D4AF37] hover:bg-white/10 text-xs text-[#FFF8F0] transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]"
                 aria-label={`Follow Raju Mehandi Art on Instagram @${footerData.contact.instagram}`}
               >
                 <Instagram className="w-3.5 h-3.5 text-[#E5C988]" aria-hidden="true" />
-                <span>@{footerData.contact.instagram}</span>
+                <span>Instagram</span>
+              </a>
+
+              <a
+                href={footerData.contact.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded bg-white/5 border border-[#D4AF37]/30 hover:border-[#D4AF37] hover:bg-white/10 text-xs text-[#FFF8F0] transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]"
+                aria-label="Visit Raju Mehandi Art on Facebook"
+              >
+                <Facebook className="w-3.5 h-3.5 text-[#E5C988]" aria-hidden="true" />
+                <span>Facebook</span>
               </a>
 
               <a
@@ -162,7 +175,7 @@ export default function Footer() {
                 aria-label="Direct message on WhatsApp"
               >
                 <MessageCircle className="w-3.5 h-3.5" aria-hidden="true" />
-                <span>Chat Now</span>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>

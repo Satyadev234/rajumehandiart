@@ -50,6 +50,8 @@ export const footerData = {
     cityState: 'Shakti Khand I, Indirapuram, Ghaziabad, UP 201014',
     instagram: businessData.contact.instagram,
     instagramUrl: businessData.contact.instagramUrl,
+    facebookUrl: businessData.contact.facebookUrl,
+    email: businessData.contact.email,
   },
   copyrightText: 'Raju Mehandi Art. All rights reserved. Handcrafted in Indirapuram, Ghaziabad.',
   tagline: 'Artistry in Every Stroke · Elegance in Every Shade',

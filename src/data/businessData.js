@@ -45,6 +45,8 @@ export const businessData = {
     country: 'IN',
     instagram: 'rajumehandiartist_',
     instagramUrl: 'https://instagram.com/rajumehandiartist_?utm_source=qr&exln=b2FuZ20zZml4bXhj',
+    facebookUrl: 'https://www.facebook.com/profile.php?id=100090531090959',
+    email: 'devnayak199700@gmail.com',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.204416884253!2d77.35822887541197!3d28.647476283402167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb56ef399d0b%3A0xb1d89b7bcead4780!2sRaju%20Mehandi%20Artist!5e1!3m2!1sen!2sin!4v1792002555023!5m2!1sen!2sin',
   },
   services: [

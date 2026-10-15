@@ -1,7 +1,90 @@
+import { useState } from 'react';
 import { businessData } from '../data/businessData';
+import { MessageCircle, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
 export default function ContactSection() {
   const { contact, policies } = businessData;
+
+  const [formData, setFormData] = useState({
+    name: '',
+    number: '',
+    location: '',
+    date: '',
+    requirement: '',
+  });
+
+  const [status, setStatus] = useState({
+    submitting: false,
+    success: false,
+    error: null,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // 1. WhatsApp Action
+  const handleWhatsAppSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.number || !formData.date) {
+      alert('Please fill in your Name, Phone Number, and Date before sending on WhatsApp.');
+      return;
+    }
+
+    const text = 
+      `*New Booking / Enquiry - Raju Mehandi Art*\n\n` +
+      `👤 *Name:* ${formData.name}\n` +
+      `📞 *Phone:* ${formData.number}\n` +
+      `📍 *Location:* ${formData.location || 'Not specified'}\n` +
+      `📅 *Date:* ${formData.date}\n` +
+      `💬 *Custom Requirement:* ${formData.requirement || 'None'}`;
+
+    const url = `https://wa.me/${contact.whatsappInternational}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  // 2. Web3Forms Email Action
+  const handleEmailSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.number || !formData.date) {
+      alert('Please fill in your Name, Phone Number, and Date before sending the email enquiry.');
+      return;
+    }
+
+    setStatus({ submitting: true, success: false, error: null });
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '6d817d39-3ef2-4c69-9b33-43e42bd9cbf1',
+          subject: `New Bridal/Event Booking Enquiry from ${formData.name}`,
+          from_name: 'Raju Mehandi Art Website',
+          name: formData.name,
+          phone: formData.number,
+          location: formData.location || 'Not specified',
+          date: formData.date,
+          message: formData.requirement || 'No custom requirement specified.',
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus({ submitting: false, success: true, error: null });
+        setFormData({ name: '', number: '', location: '', date: '', requirement: '' });
+      } else {
+        throw new Error(result.message || 'Failed to send message via Web3Forms.');
+      }
+    } catch (err) {
+      setStatus({ submitting: false, success: false, error: err.message || 'Something went wrong. Please try again.' });
+    }
+  };
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -13,81 +96,174 @@ export default function ContactSection() {
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#3A1017] mt-1">
             Bookings & Enquiries
           </h2>
-          <p className="mt-2 text-sm text-[#382326]/80 font-sans max-w-md mx-auto">
+          <p className="mt-2 text-sm text-[#382326]/80 font-sans max-w-lg mx-auto">
             Connect directly with {businessData.name} for bridal bookings, event dates, and availability in Indirapuram, Ghaziabad & Delhi-NCR.
           </p>
         </div>
 
-        <div className="bg-[#F5EEE6]/60 rounded-xl p-6 sm:p-8 border border-[#E9D8B8]/60 shadow-sm space-y-8">
-          {/* WhatsApp Direct Banner */}
-          <div className="bg-[#3A1017] text-[#F5EEE6] rounded-lg p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-wider text-[#E9D8B8] font-semibold">
-                Instant Availability Check
-              </p>
-              <p className="text-base font-serif mt-0.5 text-[#F5EEE6]">
-                Message us directly on WhatsApp
-              </p>
+        <div className="bg-[#F5EEE6]/60 rounded-xl p-6 sm:p-10 border border-[#E9D8B8]/60 shadow-sm space-y-8">
+          {/* Success Banner */}
+          {status.success && (
+            <div className="bg-[#102F28] text-[#F7E9D8] p-4 rounded-lg flex items-center gap-3 border border-[#C6A05C]">
+              <CheckCircle2 className="w-5 h-5 text-[#C6A05C] shrink-0" />
+              <div>
+                <p className="font-semibold text-sm">Enquiry Sent Successfully!</p>
+                <p className="text-xs text-[#F7E9D8]/80 mt-0.5">Thank you for reaching out. Raju Mehandi Art will get back to you shortly.</p>
+              </div>
             </div>
-            <a
-              href={contact.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-[0.16em] font-semibold py-3 px-6 rounded bg-[#C5A15A] text-[#3A1017] hover:bg-[#E9D8B8] transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E9D8B8]"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-              </svg>
-              <span>Chat on WhatsApp</span>
-            </a>
-          </div>
+          )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          {/* Error Banner */}
+          {status.error && (
+            <div className="bg-[#541820] text-white p-4 rounded-lg flex items-center gap-3">
+              <AlertCircle className="w-5 h-5 text-[#E9D8B8] shrink-0" />
+              <div>
+                <p className="font-semibold text-sm">Submission Error</p>
+                <p className="text-xs text-white/80 mt-0.5">{status.error}</p>
+              </div>
+            </div>
+          )}
+
+          {/* Interactive Form */}
+          <form className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="name" className="block text-xs uppercase tracking-wider font-semibold text-[#541820] mb-2">
+                  Your Full Name <span className="text-red-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="e.g. Priya Sharma"
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-[#E9D8B8] text-sm text-[#382326] focus:outline-none focus:ring-2 focus:ring-[#C5A15A]"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="number" className="block text-xs uppercase tracking-wider font-semibold text-[#541820] mb-2">
+                  Phone Number / WhatsApp <span className="text-red-600">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="number"
+                  name="number"
+                  required
+                  value={formData.number}
+                  onChange={handleChange}
+                  placeholder="e.g. +91 98765 43210"
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-[#E9D8B8] text-sm text-[#382326] focus:outline-none focus:ring-2 focus:ring-[#C5A15A]"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="location" className="block text-xs uppercase tracking-wider font-semibold text-[#541820] mb-2">
+                  Event Location / Venue
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  placeholder="e.g. Indirapuram, Ghaziabad / Delhi-NCR"
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-[#E9D8B8] text-sm text-[#382326] focus:outline-none focus:ring-2 focus:ring-[#C5A15A]"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="date" className="block text-xs uppercase tracking-wider font-semibold text-[#541820] mb-2">
+                  Booking Date <span className="text-red-600">*</span>
+                </label>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  required
+                  value={formData.date}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-[#E9D8B8] text-sm text-[#382326] focus:outline-none focus:ring-2 focus:ring-[#C5A15A]"
+                />
+              </div>
+            </div>
+
             <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-[#541820] mb-2">
-                Phone Contact
-              </h3>
-              <p className="text-gray-900 font-medium">
-                Call / WhatsApp:{' '}
-                <a
-                  href={`tel:${contact.primaryPhone}`}
-                  className="text-[#541820] hover:text-[#C5A15A] font-semibold underline decoration-[#C5A15A]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A15A] rounded px-1"
+              <label htmlFor="requirement" className="block text-xs uppercase tracking-wider font-semibold text-[#541820] mb-2">
+                Custom Requirement / Design Notes
+              </label>
+              <textarea
+                id="requirement"
+                name="requirement"
+                rows="4"
+                value={formData.requirement}
+                onChange={handleChange}
+                placeholder="Mention bridal package choice, number of guests, or special design preferences..."
+                className="w-full px-4 py-3 rounded-lg bg-white border border-[#E9D8B8] text-sm text-[#382326] focus:outline-none focus:ring-2 focus:ring-[#C5A15A]"
+              ></textarea>
+            </div>
+
+            {/* Two Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-[#E9D8B8]/60">
+              <p className="text-xs text-[#382326]/70">
+                <span className="font-semibold text-[#541820]">Policy:</span> {policies.advancePayment}
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+                {/* WhatsApp Button */}
+                <button
+                  type="button"
+                  onClick={handleWhatsAppSubmit}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs uppercase tracking-[0.16em] font-semibold py-3.5 px-6 rounded-lg bg-[#25D366] text-white hover:bg-[#20ba5a] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
                 >
-                  +91 {contact.primaryPhone}
-                </a>
-              </p>
-            </div>
+                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <span>Send via WhatsApp</span>
+                </button>
 
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-[#541820] mb-2">
-                Studio Address & Location
-              </h3>
-              <p className="text-[#382326] leading-relaxed">
-                {contact.address}
-              </p>
+                {/* Web3Forms Email Button */}
+                <button
+                  type="button"
+                  onClick={handleEmailSubmit}
+                  disabled={status.submitting}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs uppercase tracking-[0.16em] font-semibold py-3.5 px-6 rounded-lg bg-[#3A1017] text-[#F5EEE6] hover:bg-[#541820] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A15A] disabled:opacity-50"
+                >
+                  {status.submitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Sending Email...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>Send via Email</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
+          </form>
 
+          {/* Contact Details Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-[#E9D8B8]/60 text-xs">
             <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-[#541820] mb-2">
-                Instagram Portfolio
-              </h3>
-              <a
-                href={contact.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#541820] hover:text-[#C5A15A] font-semibold underline decoration-[#C5A15A]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A15A] rounded px-1"
-              >
-                @{contact.instagram}
+              <span className="font-semibold uppercase tracking-wider text-[#541820] block mb-1">Phone Contact</span>
+              <a href={`tel:${contact.primaryPhone}`} className="text-[#382326] font-medium hover:text-[#C5A15A]">
+                +91 {contact.primaryPhone}
               </a>
             </div>
-
             <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-[#541820] mb-2">
-                Booking Policy
-              </h3>
-              <p className="text-sm text-[#382326]/90">
-                {policies.advancePayment}
-              </p>
+              <span className="font-semibold uppercase tracking-wider text-[#541820] block mb-1">Email Address</span>
+              <a href={`mailto:${contact.email}`} className="text-[#382326] font-medium hover:text-[#C5A15A]">
+                {contact.email}
+              </a>
+            </div>
+            <div>
+              <span className="font-semibold uppercase tracking-wider text-[#541820] block mb-1">Studio Address</span>
+              <p className="text-[#382326] leading-relaxed">{contact.address}</p>
             </div>
           </div>
 
@@ -106,7 +282,7 @@ export default function ContactSection() {
             </h3>
             <div className="relative w-full h-72 sm:h-80 rounded-lg overflow-hidden border border-[#E9D8B8] shadow-sm bg-[#F5EEE6]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.204416884253!2d77.35822887541197!3d28.647476283402167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb56ef399d0b%3A0xb1d89b7bcead4780!2sRaju%20Mehandi%20Artist!5e1!3m2!1sen!2sin!4v1792002555023!5m2!1sen!2sin"
+                src={contact.mapEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
