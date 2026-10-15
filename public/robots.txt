@@ -1,0 +1,6 @@
+# robots.txt for Raju Mehandi Art
+User-agent: *
+Allow: /
+
+# Sitemap configuration for search engines
+Sitemap: https://rajumehandiartist.com/sitemap.xml
