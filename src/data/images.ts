@@ -1,5 +1,5 @@
 /**
- * Master Registry of all 92 images used across Raju Mehandi Art.
+ * Master Registry of all 92 images used across Raju mehandi Artist.
  */
 
 // Local Assets (imported in various files)

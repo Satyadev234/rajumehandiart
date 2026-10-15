@@ -1,5 +1,5 @@
 /**
- * The Raju Mehandi Art Promise data configuration.
+ * The Raju mehandi Artist Promise data configuration.
  * Communicates genuine service qualities and care without unverified marketing claims.
  */
 export const rajuPromiseData = [

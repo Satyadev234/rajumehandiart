@@ -33,7 +33,7 @@ export default function ContactSection() {
     }
 
     const text = 
-      `*New Booking / Enquiry - Raju Mehandi Art*\n\n` +
+      `*New Booking / Enquiry - Raju mehandi Artist*\n\n` +
       `👤 *Name:* ${formData.name}\n` +
       `📞 *Phone:* ${formData.number}\n` +
       `📍 *Location:* ${formData.location || 'Not specified'}\n` +
@@ -64,7 +64,7 @@ export default function ContactSection() {
         body: JSON.stringify({
           access_key: '6d817d39-3ef2-4c69-9b33-43e42bd9cbf1',
           subject: `New Bridal/Event Booking Enquiry from ${formData.name}`,
-          from_name: 'Raju Mehandi Art Website',
+          from_name: 'Raju mehandi Artist Website',
           name: formData.name,
           phone: formData.number,
           location: formData.location || 'Not specified',
@@ -108,7 +108,7 @@ export default function ContactSection() {
               <CheckCircle2 className="w-5 h-5 text-[#C6A05C] shrink-0" />
               <div>
                 <p className="font-semibold text-sm">Enquiry Sent Successfully!</p>
-                <p className="text-xs text-[#F7E9D8]/80 mt-0.5">Thank you for reaching out. Raju Mehandi Art will get back to you shortly.</p>
+                <p className="text-xs text-[#F7E9D8]/80 mt-0.5">Thank you for reaching out. Raju mehandi Artist will get back to you shortly.</p>
               </div>
             </div>
           )}
@@ -289,7 +289,7 @@ export default function ContactSection() {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
-                title="Raju Mehandi Artist Studio Location"
+                title="Raju mehandi Artist Studio Location"
               />
             </div>
           </div>

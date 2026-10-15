@@ -33,7 +33,7 @@ export default function ContactPage({ onNavigateHome }) {
     }
 
     const text = 
-      `*New Booking / Enquiry - Raju Mehandi Art*\n\n` +
+      `*New Booking / Enquiry - Raju mehandi Artist*\n\n` +
       `👤 *Name:* ${formData.name}\n` +
       `📞 *Phone:* ${formData.number}\n` +
       `📍 *Location:* ${formData.location || 'Not specified'}\n` +
@@ -64,7 +64,7 @@ export default function ContactPage({ onNavigateHome }) {
         body: JSON.stringify({
           access_key: '6d817d39-3ef2-4c69-9b33-43e42bd9cbf1',
           subject: `New Bridal/Event Booking Enquiry from ${formData.name}`,
-          from_name: 'Raju Mehandi Art Website',
+          from_name: 'Raju mehandi Artist Website',
           name: formData.name,
           phone: formData.number,
           location: formData.location || 'Not specified',
@@ -103,7 +103,7 @@ export default function ContactPage({ onNavigateHome }) {
             Atelier Enquiries & Bookings
           </span>
           <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#3A1017] mt-2">
-            Contact Raju Mehandi Art
+            Contact Raju mehandi Artist
           </h1>
           <p className="mt-3 text-sm sm:text-base text-[#382326]/80 font-sans max-w-xl mx-auto">
             Fill out your celebration details below to connect instantly via WhatsApp or send a secure email enquiry.
@@ -117,7 +117,7 @@ export default function ContactPage({ onNavigateHome }) {
               <CheckCircle2 className="w-5 h-5 text-[#C6A05C] shrink-0" />
               <div>
                 <p className="font-semibold text-sm">Enquiry Sent Successfully!</p>
-                <p className="text-xs text-[#F7E9D8]/80 mt-0.5">Thank you for reaching out. Raju Mehandi Art will get back to you shortly.</p>
+                <p className="text-xs text-[#F7E9D8]/80 mt-0.5">Thank you for reaching out. Raju mehandi Artist will get back to you shortly.</p>
               </div>
             </div>
           )}
@@ -309,7 +309,7 @@ export default function ContactPage({ onNavigateHome }) {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
-                title="Raju Mehandi Artist Studio Location"
+                title="Raju mehandi Artist Studio Location"
               />
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function RajuPromise() {
           {/* Eyebrow Label */}
           <span className="text-[8.5px] sm:text-[10px] lg:text-[11px] font-semibold tracking-[0.28em] uppercase text-[#D1A653] font-sans inline-flex items-center gap-2 sm:gap-2.5">
             <span className="w-4 sm:w-6 h-[1px] bg-[#D1A653]/60 inline-block" aria-hidden="true" />
-            <span>— THE RAJU MEHANDI ART PROMISE —</span>
+            <span>— THE Raju mehandi Artist PROMISE —</span>
             <span className="w-4 sm:w-6 h-[1px] bg-[#D1A653]/60 inline-block" aria-hidden="true" />
           </span>
 

@@ -17,8 +17,8 @@ export const signatureStylesData = [
     category: 'Custom Bridal',
     objectPosition: 'center 30%',
     detailsUrl: '/styles/customise-design',
-    whatsappMessage: 'Hello Raju Mehandi Art, I am interested in your Customise design. Could you please share more details?',
-    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju Mehandi Art, I am interested in your Customise design. Could you please share more details?')}`,
+    whatsappMessage: 'Hello Raju mehandi Artist, I am interested in your Customise design. Could you please share more details?',
+    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju mehandi Artist, I am interested in your Customise design. Could you please share more details?')}`,
   },
   {
     id: 'style-arabic-design',
@@ -30,8 +30,8 @@ export const signatureStylesData = [
     category: 'Arabic Style',
     objectPosition: 'center center',
     detailsUrl: '/styles/arabic-design',
-    whatsappMessage: 'Hello Raju Mehandi Art, I am interested in your Arabic design. Could you please share more details?',
-    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju Mehandi Art, I am interested in your Arabic design. Could you please share more details?')}`,
+    whatsappMessage: 'Hello Raju mehandi Artist, I am interested in your Arabic design. Could you please share more details?',
+    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju mehandi Artist, I am interested in your Arabic design. Could you please share more details?')}`,
   },
   {
     id: 'style-portrait-mehndi',
@@ -43,8 +43,8 @@ export const signatureStylesData = [
     category: 'Portrait Style',
     objectPosition: 'center 35%',
     detailsUrl: '/styles/portrait-mehndi',
-    whatsappMessage: 'Hello Raju Mehandi Art, I am interested in your Portrait Mehndi. Could you please share more details?',
-    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju Mehandi Art, I am interested in your Portrait Mehndi. Could you please share more details?')}`,
+    whatsappMessage: 'Hello Raju mehandi Artist, I am interested in your Portrait Mehndi. Could you please share more details?',
+    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju mehandi Artist, I am interested in your Portrait Mehndi. Could you please share more details?')}`,
   },
   {
     id: 'style-storytelling-mehndi',
@@ -56,8 +56,8 @@ export const signatureStylesData = [
     category: 'Storytelling Style',
     objectPosition: 'center 40%',
     detailsUrl: '/styles/storytelling-mehndi',
-    whatsappMessage: 'Hello Raju Mehandi Art, I am interested in your Storytelling Mehndi. Could you please share more details?',
-    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju Mehandi Art, I am interested in your Storytelling Mehndi. Could you please share more details?')}`,
+    whatsappMessage: 'Hello Raju mehandi Artist, I am interested in your Storytelling Mehndi. Could you please share more details?',
+    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju mehandi Artist, I am interested in your Storytelling Mehndi. Could you please share more details?')}`,
   },
   {
     id: 'style-traditional-mehndi',
@@ -69,8 +69,8 @@ export const signatureStylesData = [
     category: 'Traditional Style',
     objectPosition: 'center 35%',
     detailsUrl: '/styles/traditional-mehndi',
-    whatsappMessage: 'Hello Raju Mehandi Art, I am interested in your Traditional Mehndi. Could you please share more details?',
-    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju Mehandi Art, I am interested in your Traditional Mehndi. Could you please share more details?')}`,
+    whatsappMessage: 'Hello Raju mehandi Artist, I am interested in your Traditional Mehndi. Could you please share more details?',
+    whatsappUrl: `${whatsappBase}${encodeURIComponent('Hello Raju mehandi Artist, I am interested in your Traditional Mehndi. Could you please share more details?')}`,
   },
 ];
 

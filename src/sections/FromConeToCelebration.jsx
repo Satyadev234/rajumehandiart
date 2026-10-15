@@ -261,7 +261,7 @@ export default function FromConeToCelebration() {
                       <div className="absolute inset-0 bg-gradient-to-t from-[#3D0E16] via-transparent to-transparent opacity-60 pointer-events-none" />
                       <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] text-[#F7E9D8] font-sans">
                         <span className="tracking-widest uppercase font-medium text-[#C6A05C]">
-                          Raju Mehandi Art
+                          Raju mehandi Artist
                         </span>
                         <span className="text-[#B9A09A]">Indirapuram, Ghaziabad</span>
                       </div>

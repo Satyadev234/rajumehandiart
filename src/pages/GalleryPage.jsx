@@ -29,7 +29,7 @@ export default function GalleryPage({ onNavigateHome }) {
 
     // Format message with ONLY image URLs as requested
     const text = 
-      `*Selected Mehndi Design URLs - Raju Mehandi Art*\n\n` +
+      `*Selected Mehndi Design URLs - Raju mehandi Artist*\n\n` +
       selectedUrls.join('\n');
 
     const url = `https://wa.me/${businessData.contact.whatsappInternational}?text=${encodeURIComponent(text)}`;
@@ -53,7 +53,7 @@ export default function GalleryPage({ onNavigateHome }) {
             Curated Masterpieces ({extendedGalleryData.length} Designs)
           </span>
           <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#3A1017] mt-1">
-            Raju Mehandi Art Gallery
+            Raju mehandi Artist Gallery
           </h1>
           <p className="mt-2 text-xs sm:text-sm text-[#382326]/80 font-sans max-w-xl mx-auto">
             Browse our extensive collection. Click any photo to view in large size, or tap the plus button (+) to add designs to your enquiry cart.

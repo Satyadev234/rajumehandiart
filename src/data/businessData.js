@@ -20,15 +20,15 @@ import step3BlessedHennaBlend from '../assets/images/step3_blessed_henna_blend_1
 import step4NaturalDyeRelease from '../assets/images/step4_natural_dye_release_1791801727858.jpg';
 import step5ReadyForBeauty from '../assets/images/step5_ready_for_beauty_1791801741171.jpg';
 
-const prefilledMessage = 'Hello Raju Mehandi Art, I would like to enquire about your mehndi services and availability.';
+const prefilledMessage = 'Hello Raju mehandi Artist, I would like to enquire about your mehndi services and availability.';
 const encodedMessage = encodeURIComponent(prefilledMessage);
 
 /**
- * Central business configuration for Raju Mehandi Art.
+ * Central business configuration for Raju mehandi Artist.
  * Single source of truth for business contact, services, and branding.
  */
 export const businessData = {
-  name: 'Raju Mehandi Art',
+  name: 'Raju mehandi Artist',
   tagline: 'Professional Mehndi Artistry in Indirapuram, Ghaziabad',
   eyebrow: 'LUXURY MEHNDI ARTISTRY · INDIRAPURAM, GHAZIABAD',
   heroHeading: 'Tradition Woven With Elegance',
@@ -153,8 +153,8 @@ export const businessData = {
       rating: null,
       reviewCount: null,
       detailsUrl: '/bridal-packages/premium',
-      whatsappMessage: 'Hello Raju Mehandi Art, I would like to enquire about the Premium Bridal Package.',
-      whatsappUrl: `https://wa.me/919634568799?text=${encodeURIComponent('Hello Raju Mehandi Art, I would like to enquire about the Premium Bridal Package.')}`,
+      whatsappMessage: 'Hello Raju mehandi Artist, I would like to enquire about the Premium Bridal Package.',
+      whatsappUrl: `https://wa.me/919634568799?text=${encodeURIComponent('Hello Raju mehandi Artist, I would like to enquire about the Premium Bridal Package.')}`,
     },
     {
       id: 'signature-bridal',
@@ -170,8 +170,8 @@ export const businessData = {
       rating: null,
       reviewCount: null,
       detailsUrl: '/bridal-packages/signature',
-      whatsappMessage: 'Hello Raju Mehandi Art, I would like to enquire about the Signature Bridal Package.',
-      whatsappUrl: `https://wa.me/919634568799?text=${encodeURIComponent('Hello Raju Mehandi Art, I would like to enquire about the Signature Bridal Package.')}`,
+      whatsappMessage: 'Hello Raju mehandi Artist, I would like to enquire about the Signature Bridal Package.',
+      whatsappUrl: `https://wa.me/919634568799?text=${encodeURIComponent('Hello Raju mehandi Artist, I would like to enquire about the Signature Bridal Package.')}`,
     },
     {
       id: 'royal-bridal',
@@ -187,8 +187,8 @@ export const businessData = {
       rating: null,
       reviewCount: null,
       detailsUrl: '/bridal-packages/royal',
-      whatsappMessage: 'Hello Raju Mehandi Art, I would like to enquire about the Royal Bridal Package.',
-      whatsappUrl: `https://wa.me/919634568799?text=${encodeURIComponent('Hello Raju Mehandi Art, I would like to enquire about the Royal Bridal Package.')}`,
+      whatsappMessage: 'Hello Raju mehandi Artist, I would like to enquire about the Royal Bridal Package.',
+      whatsappUrl: `https://wa.me/919634568799?text=${encodeURIComponent('Hello Raju mehandi Artist, I would like to enquire about the Royal Bridal Package.')}`,
     },
   ],
   sacredJourneyData: {

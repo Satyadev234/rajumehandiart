@@ -30,7 +30,7 @@ export default function Footer() {
             <a
               href="#home"
               className="group inline-flex items-center gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] rounded-lg p-1 -m-1"
-              aria-label="Raju Mehandi Art - Return to top"
+              aria-label="Raju mehandi Artist - Return to top"
             >
               <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border border-[#D4AF37]/50 shadow-[0_0_16px_rgba(212,175,55,0.25)] group-hover:border-[#E5C988] transition-colors shrink-0">
                 <img
@@ -150,7 +150,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-3 py-2 rounded bg-white/5 border border-[#D4AF37]/30 hover:border-[#D4AF37] hover:bg-white/10 text-xs text-[#FFF8F0] transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]"
-                aria-label={`Follow Raju Mehandi Art on Instagram @${footerData.contact.instagram}`}
+                aria-label={`Follow Raju mehandi Artist on Instagram @${footerData.contact.instagram}`}
               >
                 <Instagram className="w-3.5 h-3.5 text-[#E5C988]" aria-hidden="true" />
                 <span>Instagram</span>
@@ -161,7 +161,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-3 py-2 rounded bg-white/5 border border-[#D4AF37]/30 hover:border-[#D4AF37] hover:bg-white/10 text-xs text-[#FFF8F0] transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]"
-                aria-label="Visit Raju Mehandi Art on Facebook"
+                aria-label="Visit Raju mehandi Artist on Facebook"
               >
                 <Facebook className="w-3.5 h-3.5 text-[#E5C988]" aria-hidden="true" />
                 <span>Facebook</span>

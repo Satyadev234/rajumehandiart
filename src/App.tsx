@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingContactButton from './components/FloatingContactButton';
 import HeroSection from './sections/HeroSection';
 import CelebrationCategories from './sections/CelebrationCategories';
 import BridalPackages from './sections/BridalPackages';
@@ -129,6 +130,7 @@ export default function App() {
         )}
       </main>
       <Footer />
+      <FloatingContactButton />
     </div>
   );
 }

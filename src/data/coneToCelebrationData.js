@@ -19,7 +19,7 @@ export const coneToCelebrationData = {
       highlights: ['Bespoke Couple Portraits', 'Elbow to Fingertip Coverage', 'Intricate Bridal Feet Jaal'],
       image: catBridalMehndi,
       imageAlt: 'Detailed traditional Indian bridal mehndi design adorning hands and arms with fine traditional motifs',
-      whatsappEnquiryText: 'Hello Raju Mehandi Art, I would like to enquire about Grand Bridal Mehndi services.',
+      whatsappEnquiryText: 'Hello Raju mehandi Artist, I would like to enquire about Grand Bridal Mehndi services.',
     },
     {
       id: 'engagement-celebration',
@@ -31,7 +31,7 @@ export const coneToCelebrationData = {
       highlights: ['Contemporary Arabesque', 'Delicate Backhand Lace', 'Ring-Accentuated Mandalas'],
       image: catEngagementMehndi,
       imageAlt: 'Graceful modern engagement mehndi design on palms with fine floral lace patterns',
-      whatsappEnquiryText: 'Hello Raju Mehandi Art, I would like to enquire about Engagement Mehndi artistry.',
+      whatsappEnquiryText: 'Hello Raju mehandi Artist, I would like to enquire about Engagement Mehndi artistry.',
     },
     {
       id: 'festival-celebration',
@@ -43,7 +43,7 @@ export const coneToCelebrationData = {
       highlights: ['Karwa Chauth Specials', 'Traditional Teej Peacocks', 'Swift & High-Density Detailing'],
       image: catPortraitMehndi,
       imageAlt: 'Auspicious festive mehndi design with intricate temple motifs and fine traditional shading',
-      whatsappEnquiryText: 'Hello Raju Mehandi Art, I would like to enquire about Festive Mehndi appointments.',
+      whatsappEnquiryText: 'Hello Raju mehandi Artist, I would like to enquire about Festive Mehndi appointments.',
     },
     {
       id: 'groom-celebration',
@@ -55,7 +55,7 @@ export const coneToCelebrationData = {
       highlights: ['Bride & Groom Initials', 'Auspicious Sacred Symbols', 'Clean Minimalist Palms'],
       image: catGroomMehndi,
       imageAlt: 'Refined and understated groom mehndi design on palms with auspicious traditional motifs',
-      whatsappEnquiryText: "Hello Raju Mehandi Art, I would like to enquire about Groom's Mehndi packages.",
+      whatsappEnquiryText: "Hello Raju mehandi Artist, I would like to enquire about Groom's Mehndi packages.",
     },
     {
       id: 'family-celebration',
@@ -67,7 +67,7 @@ export const coneToCelebrationData = {
       highlights: ['Bridal Party Team Service', 'Rapid Artistic Precision', 'Coordinated Sangeet Packages'],
       image: catFamilyMehndi,
       imageAlt: 'Joyous sangeet celebration guests and family members displaying elegant mehndi designs',
-      whatsappEnquiryText: 'Hello Raju Mehandi Art, I would like to enquire about Sangeet and Family Mehndi packages.',
+      whatsappEnquiryText: 'Hello Raju mehandi Artist, I would like to enquire about Sangeet and Family Mehndi packages.',
     },
   ],
   cta: {
@@ -78,6 +78,6 @@ export const coneToCelebrationData = {
     policyNote: 'Advance amount is non-refundable. Both studio visits in Indirapuram, Ghaziabad and destination venue appointments are catered.',
     primaryPhone: '9634568799',
     secondaryPhone: '9634568799',
-    whatsappMessage: 'Hello Raju Mehandi Art, I would like to enquire about date availability and booking for an upcoming celebration.',
+    whatsappMessage: 'Hello Raju mehandi Artist, I would like to enquire about date availability and booking for an upcoming celebration.',
   },
 };

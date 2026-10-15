@@ -1,5 +1,5 @@
 /**
- * Central testimonial configuration and data for Raju Mehandi Art.
+ * Central testimonial configuration and data for Raju mehandi Artist.
  * Section 9: "Words From Our Brides"
  *
  * IMPORTANT:
@@ -83,7 +83,7 @@ export const shareExperienceConfig = {
   externalUrl: null, // Set to Google Business review URL once verified by business owner
   whatsappNumber: '919634568799',
   whatsappMessage:
-    'Hello Raju Mehandi Art, I would love to share my experience with your mehndi service. Please let me know how I can submit my feedback.',
+    'Hello Raju mehandi Artist, I would love to share my experience with your mehndi service. Please let me know how I can submit my feedback.',
 };
 
 /**

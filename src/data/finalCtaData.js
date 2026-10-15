@@ -23,8 +23,8 @@ export const finalCtaData = {
 export const footerData = {
   logo: {
     image: rajuLogoGold,
-    alt: 'Raju Mehandi Art - Luxury Monogram Emblem',
-    title: 'RAJU MEHANDI ART',
+    alt: 'Raju mehandi Artist - Luxury Monogram Emblem',
+    title: 'Raju mehandi Artist',
     subtitle: 'BRIDAL ATELIER · INDIRAPURAM',
   },
   description:
@@ -53,6 +53,6 @@ export const footerData = {
     facebookUrl: businessData.contact.facebookUrl,
     email: businessData.contact.email,
   },
-  copyrightText: 'Raju Mehandi Art. All rights reserved. Handcrafted in Indirapuram, Ghaziabad.',
+  copyrightText: 'Raju mehandi Artist. All rights reserved. Handcrafted in Indirapuram, Ghaziabad.',
   tagline: 'Artistry in Every Stroke · Elegance in Every Shade',
 };

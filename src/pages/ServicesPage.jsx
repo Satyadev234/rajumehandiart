@@ -160,7 +160,7 @@ export default function ServicesPage({ onNavigateHome, onNavigateContact }) {
                 Have a Unique Design in Mind?
               </h3>
               <p className="text-xs sm:text-sm text-[#E9D8B8]/90 leading-relaxed">
-                Whether it is a royal destination wedding, a themed family celebration, or personalised motifs, Raju Mehandi Art brings your vision to life.
+                Whether it is a royal destination wedding, a themed family celebration, or personalised motifs, Raju mehandi Artist brings your vision to life.
               </p>
             </div>
             <div className="pt-6">

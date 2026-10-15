@@ -19,7 +19,7 @@ export const extendedGalleryData = categories.flatMap((category) => {
     title: `${category} Design #${index + 1}`,
     image,
     largeImage: image,
-    alt: `Raju Mehandi Art ${category.toLowerCase()} mehndi design #${index + 1}`,
+    alt: `Raju mehandi Artist ${category.toLowerCase()} mehndi design #${index + 1}`,
     category,
   }));
 });
