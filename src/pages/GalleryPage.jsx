@@ -8,7 +8,7 @@ export default function GalleryPage({ onNavigateHome }) {
   const [activeCategory, setActiveCategory] = useState('All');
   const [lightboxImage, setLightboxImage] = useState(null);
 
-  const categories = ['All', 'Bridal Mehndi', 'Traditional Marwadi', 'Arabian Florals', 'Mandalas & Palms', 'Engagement & Modern', 'Groom & Family'];
+  const categories = ['All', 'Bridal', 'Engagement', 'Portrait', 'Mandala', 'Festival', 'Guest'];
 
   const filteredImages = activeCategory === 'All' 
     ? extendedGalleryData 
@@ -50,7 +50,7 @@ export default function GalleryPage({ onNavigateHome }) {
 
         <div className="text-center mb-8">
           <span className="text-[11px] font-semibold tracking-[0.24em] uppercase text-[#C5A15A] font-sans">
-            Curated Masterpieces (58 Designs)
+            Curated Masterpieces ({extendedGalleryData.length} Designs)
           </span>
           <h1 className="text-3xl sm:text-4xl font-serif font-bold text-[#3A1017] mt-1">
             Raju Mehandi Art Gallery
@@ -78,7 +78,7 @@ export default function GalleryPage({ onNavigateHome }) {
           ))}
         </div>
 
-        {/* Compact Gallery Grid (58 items) */}
+        {/* Compact Gallery Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
           {filteredImages.map((item) => {
             const isSelected = selectedUrls.includes(item.image);

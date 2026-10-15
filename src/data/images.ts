@@ -40,66 +40,87 @@ export const localImages = [
   'vikash_logo_gold_1791821209128.jpg'
 ];
 
-export const galleryPlaceholderImages = [
-  'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1609505848912-b7ef3b774b2f?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1516575334481-f85287c2c82d?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb433?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1520333789090-1afc82db536a?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1200&q=80'
+const urlImageModules = import.meta.glob<string>(
+  '../assets/images/url imageas/*.jpg',
+  { eager: true, query: '?url', import: 'default' }
+);
+
+export const urlImageFiles = [
+  'IMG-20240912-WA0011.jpg',
+  'IMG-20240913-WA0000.jpg',
+  'IMG-20240913-WA0002.jpg',
+  'IMG-20240913-WA0003.jpg',
+  'IMG-20240914-WA0000.jpg',
+  'IMG-20240914-WA0001.jpg',
+  'IMG-20240915-WA0000.jpg',
+  'IMG-20240915-WA0002.jpg',
+  'IMG-20240915-WA0004.jpg',
+  'IMG-20240915-WA0005.jpg',
+  'IMG-20240915-WA0007.jpg',
+  'IMG-20240916-WA0000.jpg',
+  'IMG-20240917-WA0000.jpg',
+  'IMG-20240917-WA0002.jpg',
+  'IMG-20240917-WA0003.jpg',
+  'IMG-20240917-WA0004.jpg',
+  'IMG-20240917-WA0006.jpg',
+  'IMG-20240918-WA0000.jpg',
+  'IMG-20240918-WA0004.jpg',
+  'IMG-20240919-WA0000.jpg',
+  'IMG-20240919-WA0001.jpg',
+  'IMG-20240919-WA0003.jpg',
+  'IMG-20240919-WA0004.jpg',
+  'IMG-20240920-WA0000.jpg',
+  'IMG-20240920-WA0001.jpg',
+  'IMG-20240920-WA0002.jpg',
+  'IMG-20240920-WA0003.jpg',
+  'IMG-20240920-WA0004.jpg',
+  'IMG-20240920-WA0005.jpg',
+  'IMG-20240920-WA0006.jpg',
+  'IMG-20240920-WA0007.jpg',
+  'IMG-20240921-WA0001.jpg',
+  'IMG-20240921-WA0002.jpg',
+  'IMG-20240921-WA0005.jpg',
+  'IMG-20240921-WA0006.jpg',
+  'IMG-20240921-WA0007.jpg',
+  'IMG-20240921-WA0008.jpg',
+  'IMG-20240921-WA0009.jpg',
+  'IMG-20240921-WA0010.jpg',
+  'IMG-20240922-WA0001.jpg',
+  'IMG-20240922-WA0002.jpg',
+  'IMG-20240922-WA0003.jpg',
+  'IMG-20240922-WA0005.jpg',
+  'IMG-20240922-WA0006.jpg',
+  'IMG-20240922-WA0007.jpg',
+  'IMG-20240922-WA0008.jpg',
+  'IMG-20240923-WA0000.jpg',
+  'IMG-20240923-WA0001.jpg',
+  'IMG-20240923-WA0002.jpg',
+  'IMG-20240923-WA0003.jpg',
+  'IMG-20240923-WA0004.jpg',
+  'IMG-20240923-WA0005.jpg',
+  'IMG-20240923-WA0006.jpg',
+  'IMG-20240924-WA0001.jpg',
+  'IMG-20240924-WA0002.jpg',
+  'IMG-20240924-WA0003.jpg',
+  'IMG-20240924-WA0004.jpg',
+  'IMG-20240924-WA0006.jpg'
 ];
+
+export const galleryPlaceholderImages = urlImageFiles.map((filename) => {
+  const imageUrl = urlImageModules[`../assets/images/url imageas/${filename}`];
+  if (!imageUrl) {
+    throw new Error(`Gallery image asset not found: ${filename}`);
+  }
+  return imageUrl;
+});
+
+for (let index = galleryPlaceholderImages.length - 1; index > 0; index--) {
+  const randomIndex = Math.floor(Math.random() * (index + 1));
+  [galleryPlaceholderImages[index], galleryPlaceholderImages[randomIndex]] = [
+    galleryPlaceholderImages[randomIndex],
+    galleryPlaceholderImages[index],
+  ];
+}
 
 export const allImages = {
   local: localImages,

@@ -1,156 +1,65 @@
 import { useState } from 'react';
 import { businessData } from '../data/businessData';
+import { extendedGalleryData } from '../data/extendedGalleryData';
 import { ArrowLeft, Sparkles, MessageCircle, X, Eye, ArrowRight } from 'lucide-react';
 
 export default function ServicesPage({ onNavigateHome, onNavigateContact }) {
   const [activeModalService, setActiveModalService] = useState(null);
+  const getCategoryImages = (category) =>
+    extendedGalleryData
+      .filter((image) => image.category === category)
+      .slice(0, 4)
+      .map(({ image, title, alt }) => ({ url: image, title, alt }));
 
-  // 5 Services with 4 curated images each
+  // 6 Services with 4 curated images each
   const servicesList = [
     {
       id: 'bridal-mehandi',
-      title: 'Bridal Mehandi',
+      title: 'Bridal',
       tagline: 'The Crown Jewel of Bridal Artistry',
       description: 'Elaborate full-arm bridal designs featuring rich traditional Jaipuri motifs, delicate wrist cuffs, fine-line detailing, and blessed organic henna formulation for a deep, long-lasting mahogany stain.',
       badge: 'Most Popular',
-      images: [
-        {
-          url: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80',
-          title: 'Royal Bridal Arms & Palms',
-          alt: 'Full bridal arms adorned with intricate traditional henna motifs'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1000&q=80',
-          title: 'Intricate Jali & Peacock Detail',
-          alt: 'Detailed bridal palm showing fine jali and peacock artwork'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80',
-          title: 'Traditional Bridal Chooda Pairing',
-          alt: 'Bridal mehndi displayed with traditional red chooda bangles'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80',
-          title: 'Complete Bridal Elegance',
-          alt: 'Indian bride in crimson red lehenga showing exquisite bridal mehndi'
-        }
-      ]
+      images: getCategoryImages('Bridal')
     },
     {
       id: 'portrait-mehandi',
-      title: 'Portrait Mehandi',
+      title: 'Portrait',
       tagline: 'Your Love Story Drawn in Henna',
       description: 'Exquisite miniature portraits of the bride and groom hand-drawn onto the palms with astonishing realism, capturing facial expressions, traditional attire, and emotional milestones.',
       badge: 'Bespoke Art',
-      images: [
-        {
-          url: 'https://images.unsplash.com/photo-1609505848912-b7ef3b774b2f?auto=format&fit=crop&w=1000&q=80',
-          title: 'Custom Couple Portrait Palm',
-          alt: 'Miniature bride and groom portrait drawn in dark henna on palm'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80',
-          title: 'Royal Maharaja & Maharani Motif',
-          alt: 'Detailed royal couple portrait henna artwork'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1000&q=80',
-          title: 'Storytelling Palm Artwork',
-          alt: 'Storytelling mehndi design with bespoke portraits'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=80',
-          title: 'Fine-Line Facial Detailing',
-          alt: 'Close-up of fine-line portrait henna on hand'
-        }
-      ]
+      images: getCategoryImages('Portrait')
     },
     {
-      id: 'groom-mehandi',
-      title: 'Groom Mehandi',
-      tagline: 'Refined Minimalist Tradition for Grooms',
-      description: 'Tasteful and refined minimalist traditional groom mehndi patterns designed to complement sherwanis and ethnic wedding wear, symbolizing auspicious beginnings.',
-      badge: 'Modern Classic',
-      images: [
-        {
-          url: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
-          title: 'Groom Minimalist Palm Motif',
-          alt: 'Minimalist traditional groom mehndi design on hand'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=80',
-          title: 'Subtle Finger & Wrist Bands',
-          alt: 'Refined groom henna pattern'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=80',
-          title: 'Traditional Auspicious Symbols',
-          alt: 'Groom mehandi with traditional auspicious symbols'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80',
-          title: 'Elegant Sherwani Pairing',
-          alt: 'Groom displaying graceful hand artwork'
-        }
-      ]
+      id: 'mandala-mehandi',
+      title: 'Mandala',
+      tagline: 'Balanced Circular Henna Artistry',
+      description: 'Intricate mandala mehndi patterns with balanced symmetry, fine-line detailing, and floral accents for a distinctive celebration look.',
+      badge: 'Symmetrical Art',
+      images: getCategoryImages('Mandala')
     },
     {
       id: 'engagement-mehandi',
-      title: 'Engagement Mehandi',
+      title: 'Engagement',
       tagline: 'Graceful Celebration of New Beginnings',
       description: 'Delicate, flowing engagement mehndi patterns designed specifically for ring ceremonies and roka functions, highlighting diamond rings and celebratory attire.',
       badge: 'Ring Ceremony',
-      images: [
-        {
-          url: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1000&q=80',
-          title: 'Bride-to-be Ring Display',
-          alt: 'Engagement mehndi highlighting diamond ring'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
-          title: 'Graceful Floral Trails',
-          alt: 'Delicate engagement floral henna trail on hand'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80',
-          title: 'Modern Fusion Wrist Design',
-          alt: 'Contemporary engagement mehandi styling'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1000&q=80',
-          title: 'Roka Ceremony Celebration',
-          alt: 'Happy bride showing engagement henna artwork'
-        }
-      ]
+      images: getCategoryImages('Engagement')
+    },
+    {
+      id: 'festival-mehandi',
+      title: 'Festival',
+      tagline: 'Traditional Henna for Festive Celebrations',
+      description: 'Celebrate festivals and cultural gatherings with elegant henna designs featuring traditional motifs, floral details, and rich, graceful patterns.',
+      badge: 'Festive Designs',
+      images: getCategoryImages('Festival')
     },
     {
       id: 'guest-arabic-mehandi',
-      title: 'Guest & Arabic Mehandi',
+      title: 'Guest',
       tagline: 'Flowing Trails for Family & Celebrations',
       description: 'Stunning Arabic vine trails, bold floral motifs, and quick-drying organic henna formulations tailored for wedding guests, family members, sangeet functions, and festive gatherings.',
       badge: 'Group & Festivities',
-      images: [
-        {
-          url: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-          title: 'Bold Arabic Floral Trails',
-          alt: 'Arabic style floral mehndi on back of hand'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1000&q=80',
-          title: 'Sangeet Guest Celebration',
-          alt: 'Wedding guests displaying decorated henna hands'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=80',
-          title: 'Contemporary Indo-Western Trails',
-          alt: 'Modern Arabic finger and wrist henna'
-        },
-        {
-          url: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=80',
-          title: 'Festive Family Gathering',
-          alt: 'Family women enjoying mehndi application together'
-        }
-      ]
+      images: getCategoryImages('Guest')
     }
   ];
 
